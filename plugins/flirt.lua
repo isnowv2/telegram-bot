@@ -17,10 +17,6 @@ end
 function save_flirt(msg)
  local to_id = tostring("flirt")
 
- if msg.text:sub(11):isempty() then
- return "Uso: !addflirt frase"
- end
-
  local flirt = flirt_table[to_id]
  flirt[#flirt+1] = msg.text:sub(11)
 
